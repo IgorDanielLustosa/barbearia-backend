@@ -11,9 +11,9 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "servicos")
+@Table(name = "planos_assinatura")
 
-public class Servico extends AuditoriaBase{
+public class PlanoAssinatura extends AuditoriaBase{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,12 +22,13 @@ public class Servico extends AuditoriaBase{
     @Column(nullable = false, length = 100)
     private String nome;
 
-    @Column(name = "duracao_minutos", nullable = false)
-    private Integer duracaoMinutos;
+    @Column(name = "quantidade_cortes", nullable = false)
+    private Integer quantidadeCortes;
 
-    @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal preco;
+   @Column(name = "valor_mensal", nullable = false, precision = 10, scale = 2)
+    private BigDecimal valorMensal;
 
     @Column(nullable = false)
     private Boolean ativo = true;
+
 }
