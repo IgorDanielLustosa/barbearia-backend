@@ -20,7 +20,6 @@ public class Barbeiro extends AuditoriaBase{
     private Long id;
 
     @OneToOne
-
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
 
